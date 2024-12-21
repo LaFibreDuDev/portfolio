@@ -1,0 +1,208 @@
+@import url(https://fonts.bunny.net/css?family=dm-sans|space-grotesk);
+
+:root {
+  --bg-primary: #0f0f0f;
+  --text-primary: #FEFEFE;
+  --text-secondary: #8F9BA8;
+  --accent-primary: #00FFB2;
+  --accent-secondary: #4D5BCE;
+  --neon-glow: 0 0 10px rgba(0, 255, 178, 0.5);
+  --black: black;
+  --blue: #2cf8ff;
+  --gradient: 44, 248, 255;
+  --gradient-neon: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --navbar-height: 70px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.5;
+}
+
+header.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  padding-block: 1.5rem;
+  padding-inline: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  margin-bottom: 1rem;
+  z-index: 10;
+
+  .logo a {
+    font-size: 1.5rem;
+    color: var(--accent-primary);
+    font-weight: 700;
+    text-shadow: var(--neon-glow);
+  }
+
+  .menu {
+    .burger {
+      display: block;
+      position: relative;
+
+      div {
+        transition: var(--transition);
+        width: 24px;
+        height: 2px;
+        background: var(--accent-primary);
+        &::before, &::after {
+          content: '';
+          position: absolute;
+          width: 24px;
+          height: 2px;
+          transform: translateY(-8px);
+          background: var(--accent-primary);
+          transition: var(--transition);
+        }
+  
+        &::after {
+          transform: translateY(8px);
+        }
+      }
+
+      &.open div {
+        background: transparent;
+        &::before {
+          transform: rotate(45deg) translateY(0);
+        }
+        &::after {
+          transform: rotate(-45deg) translateY(0);
+        }
+      }
+    }
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+.gradient {
+  position: absolute;
+  top: 0;
+  left: auto;
+  background: radial-gradient(
+    circle,
+    rgba(var(--gradient), 0.4), 
+    rgba(var(--gradient), 0.2) 50%, 
+    rgba(var(--gradient), 0) 100%
+  );
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  filter: blur(150px);
+  opacity: 0.8;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+main {
+  padding-inline: 20px;
+  margin-top: calc(2rem + var(--navbar-height));
+  position: relative;
+  z-index: 6;
+  
+  h1 {
+    background: var(--gradient-neon);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 0.875rem;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin-block: 1.2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+}
+
+.mobile_menu {
+  position: absolute;
+  z-index: 10;
+  top: var(--navbar-height);
+  width: 100%;
+  height: calc(100vh - var(--navbar-height));
+  background-color: var(--black);
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 2rem;
+
+    a {
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      &:hover {
+        background: var(--gradient-neon);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        svg {
+          stroke: var(--accent-primary);
+        }
+      }
+    }
+  }
+
+  &.open {
+    display: flex;
+  }
+}
+
+
+
+

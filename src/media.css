@@ -1,0 +1,43 @@
+/* Tablette paysage */
+@media only screen and (min-width: 768px) {
+}
+/* Ecrans */
+@media only screen and (min-width: 992px) {
+    header.navbar {
+        .menu .burger {
+            display: none;
+        }
+        nav {
+            display: flex;
+            gap: 2rem;
+
+            a {
+                display: flex;
+                align-items: end;
+                gap: 0.2rem;
+                font-size: 1.2rem;
+                svg {
+                    height: 1em;
+                }
+                &:hover {
+                    background: var(--gradient-neon);
+                    color: transparent;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    svg {
+                        stroke: var(--accent-primary);
+                    }
+                }
+            }
+        }
+    }
+    .mobile_menu {
+        &.open {
+            opacity: 0;
+            display: none;
+        }
+    }
+}
+/* grand écran */
+@media only screen and (min-width: 1200px) {
+}
