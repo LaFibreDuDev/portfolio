@@ -80,6 +80,8 @@ header.navbar {
     .burger {
       display: block;
       position: relative;
+      width: 50px;
+      height: 50px;
 
       div {
         transition: var(--transition);
