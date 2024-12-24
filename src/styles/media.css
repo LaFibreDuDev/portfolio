@@ -58,6 +58,27 @@
             }
 
         }
+    } 
+    footer {
+        & > .container {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            section {
+                width: 33%;
+                text-align: center;
+                & > a.btn-contact {
+                    display: inline-flex;
+                }
+                &:last-child {
+                    margin: left;
+                    text-align: left;
+                }
+                & > nav {
+                    justify-content: center;
+                }
+            }
+        }
     }
 }
 /* grand écran */

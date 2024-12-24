@@ -320,6 +320,7 @@ footer {
         color: var(--accent-primary);
         font-size: 0.9rem;
         margin-block: 0.8rem;
+        max-width: 75%;
       }
     } 
   }
