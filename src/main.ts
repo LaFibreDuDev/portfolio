@@ -1,6 +1,8 @@
-import './reset.css'
-import './style.css'
-import './media.css'
+import './styles/reset.css'
+import './styles/style.css'
+import './styles/media.css'
+import './styles/snow.css'
+import './snow.ts'
 
 import { createIcons, icons } from 'lucide';
 
