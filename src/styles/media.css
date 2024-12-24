@@ -37,6 +37,28 @@
             display: none;
         }
     }
+    main {
+        & .banner-btn {
+            a {
+                padding-inline: 2rem;
+                svg {
+                    width: 1.2rem;
+                    height: 1.2rem;
+                }
+            }
+        }
+        .stats {
+            .stat {
+                width: 20%;
+                text-align: center;
+                border-right: 1px solid var(--text-secondary);
+                &:last-child {
+                    border: none;
+                }
+            }
+
+        }
+    }
 }
 /* grand écran */
 @media only screen and (min-width: 1200px) {

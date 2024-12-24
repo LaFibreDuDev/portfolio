@@ -60,7 +60,7 @@ p {
   display: inline-block;
   color: var(--bg-primary);
   background: var(--gradient-neon);
-  padding: 0.8rem 2rem;
+  padding: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 2rem;
@@ -243,6 +243,11 @@ main {
     margin-block: 2rem;
     display: flex;
     gap: 1rem;
+
+    svg {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   }
 
   .stats {
