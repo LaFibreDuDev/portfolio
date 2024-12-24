@@ -7,7 +7,7 @@ function createSnowflake(): void {
 
     const size = Math.random() * 10 + 5; // Taille entre 5px et 15px
     const blur = Math.random() * 3;      // Floutage aléatoire entre 0px et 3px
-    const left = Math.random() * 100;   // Position horizontale aléatoire
+    const left = Math.random() * 90;   // Position horizontale aléatoire
     const duration = Math.random() * 5 + 5; // Durée entre 5s et 10s
 
     snowflake.style.fontSize = `${size}px`;
