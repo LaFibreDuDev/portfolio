@@ -52,6 +52,19 @@ h2 {
   line-height: 1.2;
 }
 
+h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1;
+  margin-block: 0.5rem;
+}
+
 p {
   line-height: 1.5;
 }
@@ -209,8 +222,8 @@ header.navbar {
 }
 
 main {
-  height: 1200px;
-  padding-inline: 20px;
+  min-height: 1200px;
+  padding-inline: 1rem;
   margin-top: calc(2rem + var(--navbar-height));
   position: relative;
   z-index: 5;
@@ -269,6 +282,52 @@ main {
       }
       & > .description {
         font-size: 1rem;
+      }
+    }
+  }
+
+  .experience {
+    display: flex;
+    gap: 1rem;
+    .line {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & div:first-child {
+        border: 1px solid var(--text-secondary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.25rem;
+        padding: 0.5rem;
+        background-color: #1c1e2a;
+      }
+      & div:last-child {
+        height: 100%;
+        width: 1px;
+        background: var(--text-secondary);
+      }
+    }
+    .data {
+      margin-bottom: 2rem;
+      ul {
+        list-style-type: disc;
+        li {
+          font-size: 1.1rem;
+          color: var(--text-secondary);
+          line-height: 1.6rem;
+        }
+      }
+      p {
+        &.date {
+          background: var(--gradient-neon);
+          -webkit-background-clip: text;
+          color: transparent;
+          font-weight: bold;
+        }
+        margin-block: 0.5rem;
+        font-size: 1.1rem;
       }
     }
   }

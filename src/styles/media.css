@@ -38,6 +38,7 @@
         }
     }
     main {
+        padding-inline: 8rem;
         & .banner-btn {
             a {
                 padding-inline: 2rem;
@@ -56,7 +57,14 @@
                     border: none;
                 }
             }
-
+        }
+        & .experience {
+            gap: 2rem;
+            & .data {
+                & p, & li {
+                    max-width: 50%;
+                }
+            }
         }
     } 
     footer {
